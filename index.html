@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+    <title>Document</title>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                display: ['Syne', 'sans-serif'],
+                mono:    ['DM Mono', 'monospace'],
+              },
+              colors: {
+                cream:   '#F5F0E8',
+                ink:     '#1A1A2E',
+                accent:  '#E63946',
+                muted:   '#6B7280',
+                card:    '#FFFFFF',
+                border:  '#E2D9CC',
+              },
+            },
+          },
+        };
+      </script>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-border">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+ 
+            <!-- Name -->
+            <a href="#" class="font-display font-800 text-xl tracking-tight text-ink">
+              Elias<span class="text-accent"> Cheruiyot</span>
+            </a>
+       
+            <!-- Nav Menu -->
+            <nav aria-label="Primary navigation">
+              <ul class="flex items-center gap-6 text-sm font-mono">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li>
+                  <a href="https://github.com/Hominid2653"
+                     target="_blank" rel="noopener noreferrer"
+                     class="flex items-center gap-2 bg-ink text-cream px-4 py-2 rounded-full text-xs font-mono hover:bg-accent transition-colors duration-200">
+                    <!-- GitHub icon -->
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482
+                        0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462
+                        -.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087
+                        2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943
+                        0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025
+                        A9.548 9.548 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025
+                        2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683
+                        0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012
+                        2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12
+                        c0-5.523-4.477-10-10-10z"/>
+                    </svg>
+                    GitHub
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+    </header>
+
+    <!-- Hero -->
+     <section class="relative hero-noise overflow-hidden bg-ink text-cream py-28 px-6 text-center">
+        <!-- Decorative circle -->
+    <div class="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-accent/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-accent/5 blur-3xl pointer-events-none"></div>
+ 
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <p class="section-label text-accent fade-up mb-4">Full-Stack Developer</p>
+ 
+      <h1 class="font-display font-extrabold text-5xl md:text-7xl leading-none tracking-tight fade-up delay-1 mb-6">
+        Hi, I'm <span class="text-accent">Elias Cheruiyot</span>
+      </h1>
+ 
+      <p class="font-mono text-cream/70 text-lg leading-relaxed max-w-xl mx-auto fade-up delay-2 mb-10">
+        I build clean, purposeful web experiences from pixel-perfect UIs to solid
+        back-end systems. Obsessed with craft, curious about everything.
+      </p>
+ 
+      <div class="flex flex-wrap gap-4 justify-center fade-up delay-3">
+        <a href="#projects"
+           class="bg-accent text-cream px-7 py-3 rounded-full font-display font-semibold text-sm hover:bg-red-500 transition-colors duration-200">
+          View My Work
+        </a>
+        <a href="https://github.com/Hominid2653"
+           target="_blank" rel="noopener noreferrer"
+           class="border border-cream/30 text-cream px-7 py-3 rounded-full font-display font-semibold text-sm hover:border-accent hover:text-accent transition-colors duration-200">
+          GitHub Profile ↗
+        </a>
+      </div>
+    </div>
+     </section>
+
+     <!-- About Me -->
+     <section id="about" class="max-w-5xl mx-auto px-6 py-24">
+        <p class="section-label mb-3">01 — About</p>
+        <h2 class="font-display font-bold text-4xl text-ink mb-10">About Me</h2>
+     
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+     
+          <!-- Bio -->
+          <div class="space-y-5 font-mono text-ink/80 leading-relaxed text-sm">
+            <p>
+              I'm a Computer Science student and self-driven developer passionate about
+              turning complex problems into simple, elegant solutions. My journey started
+              tinkering with HTML in High school and has since grown into building
+              full-stack applications, interactive tools, and automation scripts.
+            </p>
+            <p>
+              When I'm not coding, you'll find me contributing to open-source projects,
+              mentoring peers, or experimenting with new frameworks. I believe great
+              software is as much about the experience as it is about the logic underneath.
+            </p>
+            <p>
+              I'm actively seeking internship and junior developer roles where I can grow
+              alongside a talented team and ship meaningful products.
+            </p>
+     
+            <!-- Quick facts -->
+            <ul class="space-y-2 pt-2">
+              <li class="flex gap-3"><span class="text-accent font-semibold">→</span> Based in Nairobi, Kenya</li>
+              <li class="flex gap-3"><span class="text-accent font-semibold">→</span> CS Student — Class of 56</li>
+              <li class="flex gap-3"><span class="text-accent font-semibold">→</span> Open to remote &amp; on-site roles</li>
+            </ul>
+          </div>
+     
+          <!-- Decorative card -->
+          <div class="bg-white rounded-2xl border border-border p-8 space-y-4 font-mono text-sm">
+            <p class="text-muted text-xs section-label">// quick_stats.json</p>
+            <div class="space-y-3 text-ink">
+              <div class="flex justify-between border-b border-border pb-2">
+                <span class="text-muted">projects_shipped</span>
+                <span class="font-semibold text-accent">12+</span>
+              </div>
+              <div class="flex justify-between border-b border-border pb-2">
+                <span class="text-muted">languages_known</span>
+                <span class="font-semibold text-accent">6</span>
+              </div>
+              <div class="flex justify-between border-b border-border pb-2">
+                <span class="text-muted">github_repos</span>
+                <span class="font-semibold text-accent">30+</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted">coffee_consumed</span>
+                <span class="font-semibold text-accent">∞</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Skills -->
+      <section id="skills" class="bg-ink text-cream py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+          <p class="section-label mb-3">02 — Skills</p>
+          <h2 class="font-display font-bold text-4xl mb-12">Skills &amp; Languages</h2>
+     
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+     
+            <!-- Languages -->
+            <div>
+              <h3 class="font-display font-semibold text-accent mb-4 text-sm tracking-widest uppercase">Languages</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">Python</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">JavaScript</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">Java</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">C++</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">HTML5</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">CSS3</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">SQL</span>
+              </div>
+            </div>
+     
+            <!-- Frameworks & Tools -->
+            <div>
+              <h3 class="font-display font-semibold text-accent mb-4 text-sm tracking-widest uppercase">Frameworks &amp; Tools</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">React</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">Node.js</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">Tailwind CSS</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">Git / GitHub</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">Flask</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">REST APIs</span>
+              </div>
+            </div>
+     
+            <!-- Concepts -->
+            <div>
+              <h3 class="font-display font-semibold text-accent mb-4 text-sm tracking-widest uppercase">Concepts</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">Data Structures</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">OOP</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">Algorithms</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">Responsive Design</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">Agile</span>
+                <span class="skill-pill bg-white/10 text-cream px-4 py-2 rounded-full text-xs font-mono cursor-default">Unit Testing</span>
+              </div>
+            </div>
+     
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="max-w-5xl mx-auto px-6 py-24">
+        <p class="section-label mb-3">03 — Work</p>
+        <h2 class="font-display font-bold text-4xl text-ink mb-12">Projects</h2>
+     
+        <!-- Projects Grid -->
+        <div class="grid md:grid-cols-2 gap-8">
+     
+          <!-- ── Project 1: Calculator ── -->
+          <article class="project-card bg-white rounded-2xl border border-border overflow-hidden">
+     
+            <!-- Project image / mockup -->
+            <div class="bg-ink px-8 pt-8 pb-0 flex justify-center">
+              <!-- SVG illustration of a calculator UI -->
+              <svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg"
+                   class="w-full max-w-xs" role="img" aria-label="Calculator app screenshot">
+                <!-- Calculator body -->
+                <rect x="30" y="10" width="200" height="185" rx="14" fill="#1e1e2e"/>
+                <!-- Display -->
+                <rect x="45" y="24" width="170" height="44" rx="8" fill="#12121f"/>
+                <text x="205" y="54" text-anchor="end" font-family="DM Mono, monospace"
+                      font-size="22" fill="#F5F0E8" opacity="0.9">1,234</text>
+                <!-- Button rows -->
+                <!-- Row 1: AC +/- % ÷ -->
+                <rect x="45"  y="80" width="36" height="28" rx="7" fill="#374151"/>
+                <text x="63"  y="99" text-anchor="middle" font-family="DM Mono" font-size="11" fill="#9ca3af">AC</text>
+                <rect x="89"  y="80" width="36" height="28" rx="7" fill="#374151"/>
+                <text x="107" y="99" text-anchor="middle" font-family="DM Mono" font-size="11" fill="#9ca3af">+/-</text>
+                <rect x="133" y="80" width="36" height="28" rx="7" fill="#374151"/>
+                <text x="151" y="99" text-anchor="middle" font-family="DM Mono" font-size="11" fill="#9ca3af">%</text>
+                <rect x="177" y="80" width="38" height="28" rx="7" fill="#E63946"/>
+                <text x="196" y="99" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#fff">÷</text>
+                <!-- Row 2: 7 8 9 × -->
+                <rect x="45"  y="116" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="63"  y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">7</text>
+                <rect x="89"  y="116" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="107" y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">8</text>
+                <rect x="133" y="116" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="151" y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">9</text>
+                <rect x="177" y="116" width="38" height="28" rx="7" fill="#E63946"/>
+                <text x="196" y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#fff">×</text>
+                <!-- Row 3: 4 5 6 − -->
+                <rect x="45"  y="152" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="63"  y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">4</text>
+                <rect x="89"  y="152" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="107" y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">5</text>
+                <rect x="133" y="152" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="151" y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">6</text>
+                <rect x="177" y="152" width="38" height="28" rx="7" fill="#E63946"/>
+                <text x="196" y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#fff">−</text>
+              </svg>
+            </div>
+     
+            <!-- Project info -->
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-display font-bold text-xl text-ink">Web Calculator</h3>
+                <span class="bg-accent/10 text-accent text-xs font-mono px-3 py-1 rounded-full">JavaScript</span>
+              </div>
+              <p class="font-mono text-sm text-ink/70 leading-relaxed mb-5">
+                A fully functional browser-based calculator supporting arithmetic operations,
+                percentage calculations, and sign toggling. Built with vanilla JavaScript
+                using event delegation and a clean state machine to handle operator chaining
+                without bugs.
+              </p>
+              <ul class="space-y-1 font-mono text-xs text-ink/60 mb-6">
+                <li>→ Chained operations with live display updates</li>
+                <li>→ Keyboard input support</li>
+                <li>→ Responsive grid layout via CSS Grid</li>
+              </ul>
+              <div class="flex gap-3">
+                <a href="https://github.com/Hominid2653/calculator"
+                   target="_blank" rel="noopener noreferrer"
+                   class="flex-1 text-center border border-ink/20 text-ink text-xs font-mono py-2 rounded-lg hover:border-accent hover:text-accent transition-colors duration-200">
+                  View Code ↗
+                </a>
+                <a href="#"
+                   class="flex-1 text-center bg-accent text-cream text-xs font-mono py-2 rounded-lg hover:bg-red-500 transition-colors duration-200">
+                  Live Demo ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card bg-white rounded-2xl border border-border overflow-hidden">
+     
+            <!-- Project image / mockup -->
+            <div class="bg-ink px-8 pt-8 pb-0 flex justify-center">
+              <!-- SVG illustration of a calculator UI -->
+              <svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg"
+                   class="w-full max-w-xs" role="img" aria-label="Calculator app screenshot">
+                <!-- Calculator body -->
+                <rect x="30" y="10" width="200" height="185" rx="14" fill="#1e1e2e"/>
+                <!-- Display -->
+                <rect x="45" y="24" width="170" height="44" rx="8" fill="#12121f"/>
+                <text x="205" y="54" text-anchor="end" font-family="DM Mono, monospace"
+                      font-size="22" fill="#F5F0E8" opacity="0.9">1,234</text>
+                <!-- Button rows -->
+                <!-- Row 1: AC +/- % ÷ -->
+                <rect x="45"  y="80" width="36" height="28" rx="7" fill="#374151"/>
+                <text x="63"  y="99" text-anchor="middle" font-family="DM Mono" font-size="11" fill="#9ca3af">AC</text>
+                <rect x="89"  y="80" width="36" height="28" rx="7" fill="#374151"/>
+                <text x="107" y="99" text-anchor="middle" font-family="DM Mono" font-size="11" fill="#9ca3af">+/-</text>
+                <rect x="133" y="80" width="36" height="28" rx="7" fill="#374151"/>
+                <text x="151" y="99" text-anchor="middle" font-family="DM Mono" font-size="11" fill="#9ca3af">%</text>
+                <rect x="177" y="80" width="38" height="28" rx="7" fill="#E63946"/>
+                <text x="196" y="99" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#fff">÷</text>
+                <!-- Row 2: 7 8 9 × -->
+                <rect x="45"  y="116" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="63"  y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">7</text>
+                <rect x="89"  y="116" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="107" y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">8</text>
+                <rect x="133" y="116" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="151" y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">9</text>
+                <rect x="177" y="116" width="38" height="28" rx="7" fill="#E63946"/>
+                <text x="196" y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#fff">×</text>
+                <!-- Row 3: 4 5 6 − -->
+                <rect x="45"  y="152" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="63"  y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">4</text>
+                <rect x="89"  y="152" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="107" y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">5</text>
+                <rect x="133" y="152" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="151" y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">6</text>
+                <rect x="177" y="152" width="38" height="28" rx="7" fill="#E63946"/>
+                <text x="196" y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#fff">−</text>
+              </svg>
+            </div>
+     
+            <!-- Project info -->
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-display font-bold text-xl text-ink">Web Calculator</h3>
+                <span class="bg-accent/10 text-accent text-xs font-mono px-3 py-1 rounded-full">JavaScript</span>
+              </div>
+              <p class="font-mono text-sm text-ink/70 leading-relaxed mb-5">
+                A fully functional browser-based calculator supporting arithmetic operations,
+                percentage calculations, and sign toggling. Built with vanilla JavaScript
+                using event delegation and a clean state machine to handle operator chaining
+                without bugs.
+              </p>
+              <ul class="space-y-1 font-mono text-xs text-ink/60 mb-6">
+                <li>→ Chained operations with live display updates</li>
+                <li>→ Keyboard input support</li>
+                <li>→ Responsive grid layout via CSS Grid</li>
+              </ul>
+              <div class="flex gap-3">
+                <a href="https://github.com/Hominid2653/calculator"
+                   target="_blank" rel="noopener noreferrer"
+                   class="flex-1 text-center border border-ink/20 text-ink text-xs font-mono py-2 rounded-lg hover:border-accent hover:text-accent transition-colors duration-200">
+                  View Code ↗
+                </a>
+                <a href="#"
+                   class="flex-1 text-center bg-accent text-cream text-xs font-mono py-2 rounded-lg hover:bg-red-500 transition-colors duration-200">
+                  Live Demo ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card bg-white rounded-2xl border border-border overflow-hidden">
+     
+            <!-- Project image / mockup -->
+            <div class="bg-ink px-8 pt-8 pb-0 flex justify-center">
+              <!-- SVG illustration of a calculator UI -->
+              <svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg"
+                   class="w-full max-w-xs" role="img" aria-label="Calculator app screenshot">
+                <!-- Calculator body -->
+                <rect x="30" y="10" width="200" height="185" rx="14" fill="#1e1e2e"/>
+                <!-- Display -->
+                <rect x="45" y="24" width="170" height="44" rx="8" fill="#12121f"/>
+                <text x="205" y="54" text-anchor="end" font-family="DM Mono, monospace"
+                      font-size="22" fill="#F5F0E8" opacity="0.9">1,234</text>
+                <!-- Button rows -->
+                <!-- Row 1: AC +/- % ÷ -->
+                <rect x="45"  y="80" width="36" height="28" rx="7" fill="#374151"/>
+                <text x="63"  y="99" text-anchor="middle" font-family="DM Mono" font-size="11" fill="#9ca3af">AC</text>
+                <rect x="89"  y="80" width="36" height="28" rx="7" fill="#374151"/>
+                <text x="107" y="99" text-anchor="middle" font-family="DM Mono" font-size="11" fill="#9ca3af">+/-</text>
+                <rect x="133" y="80" width="36" height="28" rx="7" fill="#374151"/>
+                <text x="151" y="99" text-anchor="middle" font-family="DM Mono" font-size="11" fill="#9ca3af">%</text>
+                <rect x="177" y="80" width="38" height="28" rx="7" fill="#E63946"/>
+                <text x="196" y="99" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#fff">÷</text>
+                <!-- Row 2: 7 8 9 × -->
+                <rect x="45"  y="116" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="63"  y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">7</text>
+                <rect x="89"  y="116" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="107" y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">8</text>
+                <rect x="133" y="116" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="151" y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">9</text>
+                <rect x="177" y="116" width="38" height="28" rx="7" fill="#E63946"/>
+                <text x="196" y="135" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#fff">×</text>
+                <!-- Row 3: 4 5 6 − -->
+                <rect x="45"  y="152" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="63"  y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">4</text>
+                <rect x="89"  y="152" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="107" y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">5</text>
+                <rect x="133" y="152" width="36" height="28" rx="7" fill="#1f2937"/>
+                <text x="151" y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#F5F0E8">6</text>
+                <rect x="177" y="152" width="38" height="28" rx="7" fill="#E63946"/>
+                <text x="196" y="171" text-anchor="middle" font-family="DM Mono" font-size="13" fill="#fff">−</text>
+              </svg>
+            </div>
+     
+            <!-- Project info -->
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-display font-bold text-xl text-ink">Web Calculator</h3>
+                <span class="bg-accent/10 text-accent text-xs font-mono px-3 py-1 rounded-full">JavaScript</span>
+              </div>
+              <p class="font-mono text-sm text-ink/70 leading-relaxed mb-5">
+                A fully functional browser-based calculator supporting arithmetic operations,
+                percentage calculations, and sign toggling. Built with vanilla JavaScript
+                using event delegation and a clean state machine to handle operator chaining
+                without bugs.
+              </p>
+              <ul class="space-y-1 font-mono text-xs text-ink/60 mb-6">
+                <li>→ Chained operations with live display updates</li>
+                <li>→ Keyboard input support</li>
+                <li>→ Responsive grid layout via CSS Grid</li>
+              </ul>
+              <div class="flex gap-3">
+                <a href="https://github.com/Hominid2653/calculator"
+                   target="_blank" rel="noopener noreferrer"
+                   class="flex-1 text-center border border-ink/20 text-ink text-xs font-mono py-2 rounded-lg hover:border-accent hover:text-accent transition-colors duration-200">
+                  View Code ↗
+                </a>
+                <a href="#"
+                   class="flex-1 text-center bg-accent text-cream text-xs font-mono py-2 rounded-lg hover:bg-red-500 transition-colors duration-200">
+                  Live Demo ↗
+                </a>
+              </div>
+            </div>
+          </article>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-ink text-cream py-12 px-6 text-center font-mono text-sm">
+    <div class="max-w-5xl mx-auto space-y-4">
+      <p class="font-display font-bold text-2xl">
+        Elias<span class="text-accent">Cheruiyot</span>
+      </p>
+      <p class="text-cream/50 text-xs">
+        Copyright · 2026
+      </p>
+      <a href="https://github.com/Hominid2653"
+         target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center gap-2 text-cream/60 hover:text-accent transition-colors duration-200 text-xs">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482
+                   0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087
+                   2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943
+                   0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025
+                   A9.548 9.548 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025
+                   2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683
+                   0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012
+                   2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12
+                   c0-5.523-4.477-10-10-10z"/>
+        </svg>
+        github.com/Hominid2653
+      </a>
+    </div>
+  </footer>    
+
+</body>
+</html>
